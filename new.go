@@ -1,10 +1,9 @@
 package main
 
 import (
-	"gioui.org/font/gofont"
 	"github.com/gioapp/gel"
-	"github.com/w-ingsolution/c/model"
-	"github.com/w-ingsolution/capi/db"
+	"github.com/w-ingsolutions/c/model"
+	"github.com/w-ingsolutions/capi/db"
 )
 
 type WingCal struct {
@@ -22,7 +21,6 @@ type WingCal struct {
 }
 
 func NewWingCal() *WingCal {
-	gofont.Register()
 	wing := &WingCal{
 		Naziv:            "W-ing Solutions - Kalkulator",
 		Db:               db.DuoUIdbInit("./../BAZA"),

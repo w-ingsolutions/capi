@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	scribble "github.com/nanobox-io/golang-scribble"
-	"github.com/w-ingsolution/c/model"
+	"github.com/w-ingsolutions/c/model"
 	"golang.org/x/text/unicode/norm"
 	"unicode"
 )

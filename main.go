@@ -3,7 +3,7 @@ package main
 import (
 	"encoding/json"
 	"github.com/gorilla/mux"
-	"github.com/w-ingsolution/c/model"
+	"github.com/w-ingsolutions/c/model"
 	"net/http"
 	"strconv"
 )
