@@ -103,5 +103,5 @@ func main() {
 	router.HandleFunc("/radovi/{id}/{el}/{e}", wing.Element).Methods("GET")
 
 	//router.HandleFunc("/radovi/{id}", wing.getPost).Methods("GET")
-	http.ListenAndServe(":9999", router)
+	http.ListenAndServe(":9909", router)
 }
