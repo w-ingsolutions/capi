@@ -23,7 +23,7 @@ type WingCal struct {
 func NewWingCal() *WingCal {
 	wing := &WingCal{
 		Naziv:            "W-ing Solutions - Kalkulator",
-		Db:               db.DuoUIdbInit("./../BAZA"),
+		Db:               db.DuoUIdbInit("/home/marcetin/wing/BAZA"),
 		PrikazaniElement: &model.WingVrstaRadova{},
 		Suma: &model.WingIzabraniElementi{
 			UkupanNeophodanMaterijal: map[int]model.WingNeophodanMaterijal{},
