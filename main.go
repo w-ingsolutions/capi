@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"github.com/gorilla/mux"
 	"github.com/w-ingsolutions/c/model"
 	"net/http"
@@ -21,6 +22,7 @@ func (wc *WingCal) VrsteRadova(w http.ResponseWriter, r *http.Request) {
 	radovi := make(map[int]model.ElementMenu)
 	for vr, rd := range wc.Radovi.PodvrsteRadova {
 		radovi[vr] = model.ElementMenu{
+			Id:    fmt.Sprint(rd.Id),
 			Title: rd.Naziv,
 		}
 	}
@@ -36,6 +38,7 @@ func (wc *WingCal) PodvrsteRadova(w http.ResponseWriter, r *http.Request) {
 	}
 	for vr, rd := range wc.Radovi.PodvrsteRadova[id+1].PodvrsteRadova {
 		radovi[vr] = model.ElementMenu{
+			Id:    fmt.Sprint(rd.Id),
 			Title: rd.Naziv,
 		}
 	}
@@ -53,6 +56,7 @@ func (wc *WingCal) Elementi(w http.ResponseWriter, r *http.Request) {
 			m = true
 		}
 		radovi[vr] = model.ElementMenu{
+			Id:        fmt.Sprint(rd.Id),
 			Title:     rd.Naziv,
 			Materijal: m,
 		}

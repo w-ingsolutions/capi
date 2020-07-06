@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/gioapp/gel"
+	"gioui.org/widget"
 	"github.com/w-ingsolutions/c/model"
 	"github.com/w-ingsolutions/capi/db"
 )
@@ -48,15 +48,15 @@ func (w *WingCal) GenerisanjeEdita() (edit *model.EditabilnaPoljaVrsteRadova) {
 	//for rad, _ := range radovi {
 	//	w.EditabilnaPoljaVrsteRadova[rad] =
 	return &model.EditabilnaPoljaVrsteRadova{
-		Id:    new(gel.Editor),
-		Naziv: new(gel.Editor),
-		Opis: &gel.Editor{
+		Id:    new(widget.Editor),
+		Naziv: new(widget.Editor),
+		Opis: &widget.Editor{
 			SingleLine: false,
 		},
-		Obracun:  new(gel.Editor),
-		Jedinica: new(gel.Editor),
-		Cena:     new(gel.Editor),
-		Slug:     new(gel.Editor),
-		Omogucen: new(gel.CheckBox),
+		Obracun:  new(widget.Editor),
+		Jedinica: new(widget.Editor),
+		Cena:     new(widget.Editor),
+		Slug:     new(widget.Editor),
+		Omogucen: new(widget.Bool),
 	}
 }
