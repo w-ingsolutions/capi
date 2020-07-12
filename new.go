@@ -25,9 +25,9 @@ func NewWingCal() *WingCal {
 		Naziv:            "W-ing Solutions - Kalkulator",
 		Db:               db.DuoUIdbInit("/home/marcetin/wing/BAZA"),
 		PrikazaniElement: &model.WingVrstaRadova{},
-		Suma: &model.WingIzabraniElementi{
-			UkupanNeophodanMaterijal: map[int]model.WingNeophodanMaterijal{},
-		},
+		//Suma: &model.WingIzabraniElementi{
+		//	UkupanNeophodanMaterijal: map[int]model.WingNeophodanMaterijal{},
+		//},
 	}
 	//wing.NewMaterijal()
 	wing.Radovi = model.WingVrstaRadova{
