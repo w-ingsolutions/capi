@@ -23,6 +23,7 @@ func (wc *WingCal) VrsteRadova(w http.ResponseWriter, r *http.Request) {
 		radovi[vr] = model.ElementMenu{
 			Id:    rd.Id,
 			Title: rd.Naziv,
+			Slug:  rd.Slug,
 		}
 	}
 	json.NewEncoder(w).Encode(radovi)
@@ -39,6 +40,7 @@ func (wc *WingCal) PodvrsteRadova(w http.ResponseWriter, r *http.Request) {
 		radovi[vr] = model.ElementMenu{
 			Id:    rd.Id,
 			Title: rd.Naziv,
+			Slug:  rd.Slug,
 		}
 	}
 	json.NewEncoder(w).Encode(radovi)
@@ -57,6 +59,7 @@ func (wc *WingCal) Elementi(w http.ResponseWriter, r *http.Request) {
 		radovi[vr] = model.ElementMenu{
 			Id:        rd.Id,
 			Title:     rd.Naziv,
+			Slug:      rd.Slug,
 			Materijal: m,
 		}
 	}
